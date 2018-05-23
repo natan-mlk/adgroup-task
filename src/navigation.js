@@ -1,5 +1,4 @@
 import React from 'react';
-import {NavLink,} from 'react-router-dom';
 import {Navbar, Nav, NavItem} from 'react-bootstrap';
 import {LinkContainer, IndexLinkContainer} from 'react-router-bootstrap'
 
@@ -7,7 +6,12 @@ const Navigation = () => {
 
     return (
         <Navbar inverse collapseOnSelect>
+
             <Navbar.Header>
+                <p>gallery of photos</p>
+                <p>ADGROUP recruitment taks</p>
+                <Navbar.Brand className="mobile">ADGROUP gallery
+                </Navbar.Brand>
                 <Navbar.Toggle />
             </Navbar.Header>
 

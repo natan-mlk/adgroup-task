@@ -1,5 +1,28 @@
+.navbar {
+
+    .navbar-header {
+        p {
+            display: none
+        }
+    }
+}
+
 @media (min-width: 768px) {
     .navbar {
+        border-radius: 0;
+        .navbar-header {
+            margin: 0 auto;
+            float: none;
+            display: block;
+
+            p {
+                display: block;
+            }
+
+            .navbar-brand {
+                display: none;
+            }
+        }
 
         .navbar-nav {
             display: inline-block;

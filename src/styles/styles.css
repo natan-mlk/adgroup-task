@@ -1,13 +1,27 @@
+.navbar .navbar-header p {
+  display: none; }
+
 @media (min-width: 768px) {
-  .navbar .navbar-nav {
-    display: inline-block;
-    float: none;
-    vertical-align: top; }
-  .navbar .navbar-collapse {
-    text-align: center; } }
+  .navbar {
+    border-radius: 0; }
+    .navbar .navbar-header {
+      margin: 0 auto;
+      float: none;
+      display: block; }
+      .navbar .navbar-header p {
+        display: block; }
+      .navbar .navbar-header .navbar-brand {
+        display: none; }
+    .navbar .navbar-nav {
+      display: inline-block;
+      float: none;
+      vertical-align: top; }
+    .navbar .navbar-collapse {
+      text-align: center; } }
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif; }
+  font-family: sans-serif;
+  color: red; }
 
 /*# sourceMappingURL=styles.css.map */
