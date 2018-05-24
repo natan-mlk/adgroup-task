@@ -10,6 +10,9 @@
 @media (min-width: 768px) {
     .navbar {
         border-radius: 0;
+        border: none;
+        font-family: $fontFamily;
+
         .navbar-header {
             margin: 0 auto;
             float: none;
@@ -25,9 +28,51 @@
         }
 
         .navbar-nav {
-            display: inline-block;
             float: none;
             vertical-align: top;
+
+            width: 50%;
+            display: inline-flex;
+            justify-content: space-around;
+
+            li {
+                font-size: $navListFontSize;
+                position: relative;
+
+                &:before {
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 0;
+                    bottom: 0;
+                    left: 0;
+                    background-color: $mainAccentColorDarker;
+                    visibility: hidden;
+                    transition: all 0.25s ease-in-out 0s;
+                }
+
+                &:hover:before {
+                    visibility: visible;
+                    height: 3px;
+                }
+
+                &.active{
+                    &:before {
+                        visibility: visible;
+                        height: 100%;
+                    }
+
+                    a {
+                        background-color: transparent;
+
+                        &:hover,
+                        &:focus {
+                            background-color: transparent;
+                        }
+                    }
+                }
+
+            }
         }
 
         .navbar-collapse {
