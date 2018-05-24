@@ -1,10 +1,36 @@
-import React from 'react';
+import React, {Component} from 'react';
+import {Grid, Row} from 'react-bootstrap';
+import Imagebox from './image-box';
+import IMAGES from './all-images'
 
+class Gallery1 extends Component {
 
-const Gallery1 = () => {
-    return (
-        <div> kkkk</div>
-    )
+    constructor(props) {
+        super(props);
+
+        const gallery1Images = IMAGES.filter(function (item) {
+            return item.cat === "nature";
+        });
+
+        this.state = {
+            allImages: gallery1Images
+        };
+    }
+
+    render() {
+        return (
+            <Grid>
+                <Row>
+                    {this.state.allImages.map((item, index) => {
+                        return (
+                            <Imagebox source={item.src} key={index}>
+                            </Imagebox>
+                        )
+                    })}
+                </Row>
+            </Grid>
+        )
+    }
 }
 
 export default Gallery1
