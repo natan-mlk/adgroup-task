@@ -8,8 +8,8 @@ const Navigation = () => {
         <Navbar inverse collapseOnSelect>
 
             <Navbar.Header>
-                <p>gallery of photos</p>
                 <p>ADGROUP recruitment taks</p>
+                <p>- gallery of photos -</p>
                 <Navbar.Brand className="mobile">ADGROUP gallery
                 </Navbar.Brand>
                 <Navbar.Toggle />

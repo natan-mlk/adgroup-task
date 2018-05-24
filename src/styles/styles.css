@@ -6,20 +6,39 @@ body {
   color: white;
   background-color: #2c2d31; }
 
-.navbar .navbar-header p {
-  display: none; }
+.navbar {
+  border: none; }
+  .navbar .navbar-header p {
+    display: none; }
+
+.navbar-inverse .navbar-brand {
+  color: white; }
+.navbar-inverse .navbar-collapse {
+  border: none;
+  font-size: 18px; }
+  .navbar-inverse .navbar-collapse .navbar-nav {
+    margin: 0 -15px; }
+    .navbar-inverse .navbar-collapse .navbar-nav li.active {
+      background-color: #14c9be; }
+      .navbar-inverse .navbar-collapse .navbar-nav li.active a {
+        background-color: transparent; }
+        .navbar-inverse .navbar-collapse .navbar-nav li.active a:hover, .navbar-inverse .navbar-collapse .navbar-nav li.active a:focus {
+          background-color: transparent; }
 
 @media (min-width: 768px) {
   .navbar {
     border-radius: 0;
-    border: none;
     font-family: "Roboto Condensed", sans-serif; }
     .navbar .navbar-header {
-      margin: 0 auto;
+      margin: 2% auto;
       float: none;
       display: block; }
       .navbar .navbar-header p {
         display: block; }
+        .navbar .navbar-header p:first-child {
+          font-size: 23px; }
+        .navbar .navbar-header p:nth-child(2) {
+          font-size: 17px; }
       .navbar .navbar-header .navbar-brand {
         display: none; }
     .navbar .navbar-nav {
@@ -47,10 +66,6 @@ body {
         .navbar .navbar-nav li.active:before {
           visibility: visible;
           height: 100%; }
-        .navbar .navbar-nav li.active a {
-          background-color: transparent; }
-          .navbar .navbar-nav li.active a:hover, .navbar .navbar-nav li.active a:focus {
-            background-color: transparent; }
     .navbar .navbar-collapse {
       text-align: center; } }
 
