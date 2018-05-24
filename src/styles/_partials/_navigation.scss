@@ -1,110 +1,110 @@
 .navbar {
-    border: none;
+  border: none;
+  font-family: $fontFamily;
 
-    .navbar-header {
-        p {
-            display: none
-        }
+  .navbar-header {
+    p {
+      display: none
     }
+  }
+
+  .navbar-brand {
+    color: white;
+  }
+
+  .navbar-collapse {
+    border: none;
+    font-size: 18px;
+
+    .navbar-nav {
+      margin: 0 -15px;
+
+      li.active {
+        background-color: $mainAccentColorDarker;
+
+        a {
+          background-color: transparent;
+
+          &:hover,
+          &:focus {
+            background-color: transparent;
+          }
+        }
+      }
+    }
+  }
 }
 
-.navbar-inverse {
-    .navbar-brand {
-        color: white;
+@media (min-width: 768px) {
+
+  .navbar {
+    border-radius: 0;
+
+    .navbar-header {
+      margin: 2% auto;
+      float: none;
+      display: block;
+
+      p {
+        display: block;
+
+        &:first-child {
+          font-size: 23px;
+        }
+
+        &:nth-child(2) {
+          font-size: 17px;
+        }
+      }
+
+      .navbar-brand {
+        display: none;
+      }
     }
 
     .navbar-collapse {
-        border: none;
-        font-size: 18px;
+      text-align: center;
 
-        .navbar-nav {
-            margin: 0 -15px;
+      .navbar-nav {
+        float: none;
+        vertical-align: top;
 
-            li.active {
-                background-color: $mainAccentColorDarker;
+        width: 50%;
+        display: inline-flex;
+        justify-content: space-around;
 
-                a {
-                    background-color: transparent;
+        li {
+          font-size: $navListFontSize;
+          position: relative;
+          transition: all 0.25s ease-in-out 0s;
 
-                    &:hover,
-                    &:focus {
-                        background-color: transparent;
-                    }
-                }
+          &:before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 0;
+            bottom: 0;
+            left: 0;
+            background-color: $mainAccentColorDarker;
+            visibility: hidden;
+            transition: all 0.25s ease-in-out 0s;
+          }
+
+          &:hover:before {
+            visibility: visible;
+            height: 3px;
+          }
+
+          &.active {
+            background-color: transparent;
+
+            &:before {
+              visibility: visible;
+              height: 100%;
             }
+          }
         }
+      }
     }
+  }
 }
-
-    @media (min-width: 768px) {
-        .navbar {
-            border-radius: 0;
-
-            font-family: $fontFamily;
-
-            .navbar-header {
-                margin: 2% auto;
-                float: none;
-                display: block;
-
-                p {
-                    display: block;
-
-                    &:first-child {
-                        font-size: 23px;
-                    }
-
-                    &:nth-child(2) {
-                        font-size: 17px;
-                    }
-                }
-
-                .navbar-brand {
-                    display: none;
-                }
-            }
-
-            .navbar-nav {
-                float: none;
-                vertical-align: top;
-
-                width: 50%;
-                display: inline-flex;
-                justify-content: space-around;
-
-                li {
-                    font-size: $navListFontSize;
-                    position: relative;
-
-                    &:before {
-                        content: "";
-                        position: absolute;
-                        width: 100%;
-                        height: 0;
-                        bottom: 0;
-                        left: 0;
-                        background-color: $mainAccentColorDarker;
-                        visibility: hidden;
-                        transition: all 0.25s ease-in-out 0s;
-                    }
-
-                    &:hover:before {
-                        visibility: visible;
-                        height: 3px;
-                    }
-
-                    &.active {
-                        &:before {
-                            visibility: visible;
-                            height: 100%;
-                        }
-                    }
-                }
-            }
-
-            .navbar-collapse {
-                text-align: center;
-            }
-        }
-    }
-
