@@ -1,0 +1,53 @@
+.image-box2 {
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 17%;
+    margin-top: 20px;
+}
+
+.gallery-image2 {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+svg {
+    position: absolute;
+    top:0;
+    left: 0;
+
+    .shape {
+        fill: transparent;
+        stroke-dasharray: 400%;
+        stroke-dashoffset: 400%;
+        stroke-width: 4px;
+        stroke: #19f6e8;
+
+        &:hover {
+            animation: 1s draw linear forwards;
+        }
+    }
+}
+
+@keyframes draw {
+    0% {
+        stroke-dasharray: 400%;
+        stroke-dashoffset: 400%;
+        stroke-width: 4px;
+    }
+
+    80% {
+        stroke-dasharray: 400%;
+        stroke-dashoffset: 0;
+        stroke-width: 4px;
+        stroke: #19f6e8;
+    }
+    100% {
+        stroke-dasharray: 400%;
+        stroke-dashoffset: 0;
+        stroke-width: 4px;
+        stroke: transparent;
+    }
+}
+

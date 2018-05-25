@@ -71,23 +71,62 @@ body {
               visibility: visible;
               height: 100%; } }
 .image-box {
+  height: 20vh;
+  margin: 0.5%;
   overflow: hidden;
-  background-color: indianred; }
+  background-color: indianred;
+  position: relative; }
+
+.wrapper {
+  height: 100%;
+  width: calc(100% - 30px);
+  position: absolute; }
 
 .gallery-image {
+  top: 0;
+  left: 0;
+  height: 100%;
+  opacity: 0.6; }
+
+.image-box2 {
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 17%;
+  margin-top: 20px; }
+
+.gallery-image2 {
   width: 100%;
+  position: absolute;
   top: 0;
   left: 0; }
 
-.shape {
-  fill: transparent;
-  stroke-dasharray: 350%;
-  stroke-dashoffset: 0;
-  stroke-width: 4px;
-  stroke: #19f6e8; }
-
 svg {
-  display: block;
-  display: none; }
+  position: absolute;
+  top: 0;
+  left: 0; }
+  svg .shape {
+    fill: transparent;
+    stroke-dasharray: 400%;
+    stroke-dashoffset: 400%;
+    stroke-width: 4px;
+    stroke: #19f6e8; }
+    svg .shape:hover {
+      animation: 1s draw linear forwards; }
+
+@keyframes draw {
+  0% {
+    stroke-dasharray: 400%;
+    stroke-dashoffset: 400%;
+    stroke-width: 4px; }
+  80% {
+    stroke-dasharray: 400%;
+    stroke-dashoffset: 0;
+    stroke-width: 4px;
+    stroke: #19f6e8; }
+  100% {
+    stroke-dasharray: 400%;
+    stroke-dashoffset: 0;
+    stroke-width: 4px;
+    stroke: transparent; } }
 
 /*# sourceMappingURL=styles.css.map */

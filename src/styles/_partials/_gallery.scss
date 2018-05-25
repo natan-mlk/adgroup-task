@@ -1,31 +1,31 @@
 
 .image-box {
-  //padding-bottom: 17%;
+    height: 20vh;
+    margin: 0.5%;
   overflow: hidden;
   background-color: indianred;
+    position: relative;
 }
 
 .wrapper {
-
+    height: 100%;
+    width: calc(100% - 30px);
+    position: absolute;
 }
 
+//.row {
+//    display: flex;
+//    flex-wrap: wrap;
+//    justify-content: center;
+//}
+
 .gallery-image {
-  width: 100%;
+  //width: 100%;
   //position: absolute;
   top: 0;
   left: 0;
   //z-index: -1;
+    height: 100%;
+    opacity: 0.6;
 }
 
-.shape {
-  fill: transparent;
-  stroke-dasharray: 350%;
-  stroke-dashoffset: 0;
-  stroke-width: 4px;
-  stroke: #19f6e8;
-}
-
-svg {
-  display: block;
-  display: none;
-}

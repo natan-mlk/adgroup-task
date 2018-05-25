@@ -1,10 +1,10 @@
 import React from 'react';
 
 
-const Gallery2 = () => {
+const Gallery3 = () => {
     return (
         <div> fwefewfwe</div>
     )
 }
 
-export default Gallery2
+export default Gallery3
