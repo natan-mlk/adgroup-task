@@ -1,65 +1,86 @@
 .image-box-2 {
-    overflow: hidden;
-    position: relative;
-    padding-bottom: 17%;
-    margin-top: 30px;
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 17%;
+  margin-top: 30px;
 
-    &__wrapper {
-        height: 100%;
-        width: calc(100% - 30px);
-        position: absolute;
-        background-color: $wrapperBgColor;
+  &__wrapper {
+    height: 100%;
+    width: calc(100% - 30px);
+    position: absolute;
+    background-color: $wrapperBgColor;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__image {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 800ms;
+  }
+
+  &__svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    .shape {
+      fill: transparent;
+      stroke-dasharray: 400%;
+      stroke-dashoffset: 400%;
+      stroke-width: 3px;
+      stroke: $mainAccentColor;
     }
 
-    &__image {
-        width: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        transition: all 800ms;
+    .animated {
+      animation: 800ms gallery-2-draw linear forwards;
     }
+  }
 
-    &__svg {
-        position: absolute;
-        top:0;
-        left: 0;
+  &__loader {
+    width: 80px;
+    height: 3px;
 
-        .shape {
-            fill: transparent;
-            stroke-dasharray: 400%;
-            stroke-dashoffset: 400%;
-            stroke-width: 3px;
-            stroke: $mainAccentColor;
-        }
-
-        .animated {
-            animation: 800ms gallery-2-draw linear forwards;
-        }
+    line {
+      stroke: $mainAccentColor;
+      stroke-width: 3px;
+      animation: 1000ms gallery-2-loader linear infinite;
     }
-
-    &__loader {
-        width: 100%;
-        height: 100%;
-        //background-color: red;
-        transition: all 800ms;
-    }
+  }
 }
 
 @keyframes gallery-2-draw {
-    0% {
-        stroke-dasharray: 400%;
-        stroke-dashoffset: 400%;
-    }
+  0% {
+    stroke-dasharray: 400%;
+    stroke-dashoffset: 400%;
+  }
 
-    80% {
-        stroke-dasharray: 400%;
-        stroke-dashoffset: 0;
-        stroke: $mainAccentColor;
-    }
-    100% {
-        stroke-dasharray: 400%;
-        stroke-dashoffset: 0;
-        stroke: transparent;
-    }
+  80% {
+    stroke-dasharray: 400%;
+    stroke-dashoffset: 0;
+    stroke: $mainAccentColor;
+  }
+  100% {
+    stroke-dasharray: 400%;
+    stroke-dashoffset: 0;
+    stroke: transparent;
+  }
+}
+
+@keyframes gallery-2-loader {
+  0% {
+    transform: translateX(-120%);
+  }
+
+  50% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-120%);
+  }
 }
 

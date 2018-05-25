@@ -37,7 +37,11 @@ class Imagebox extends Component {
                     </svg>
 
                     <div className="image-box-2__loader" style={this.state.loaderStyle}>
-
+                        <svg height="3px" width="80px"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <line x1="0" y1="0" x2="80" y2="0" />
+                            {/*<rect height="100%" width="100%"/>*/}
+                        </svg>
                     </div>
                 </div>
             </Col>
