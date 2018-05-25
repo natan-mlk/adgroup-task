@@ -70,5 +70,24 @@ body {
             .navbar .navbar-collapse .navbar-nav li.active:before {
               visibility: visible;
               height: 100%; } }
+.image-box {
+  overflow: hidden;
+  background-color: indianred; }
+
+.gallery-image {
+  width: 100%;
+  top: 0;
+  left: 0; }
+
+.shape {
+  fill: transparent;
+  stroke-dasharray: 350%;
+  stroke-dashoffset: 0;
+  stroke-width: 4px;
+  stroke: #19f6e8; }
+
+svg {
+  display: block;
+  display: none; }
 
 /*# sourceMappingURL=styles.css.map */
