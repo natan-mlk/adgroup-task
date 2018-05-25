@@ -77,66 +77,56 @@ body {
   background-color: indianred;
   position: relative; }
 
-.wrapper {
-  height: 100%;
-  width: calc(100% - 30px);
-  position: absolute; }
-
 .gallery-image {
   top: 0;
   left: 0;
   height: 100%;
   opacity: 0.6; }
 
-.row {
-  transition: all 2000ms; }
-
-.image-box2 {
+.image-box-2 {
   overflow: hidden;
   position: relative;
   padding-bottom: 17%;
-  margin-top: 20px; }
+  margin-top: 30px; }
+  .image-box-2__wrapper {
+    height: 100%;
+    width: calc(100% - 30px);
+    position: absolute;
+    background-color: #222; }
+  .image-box-2__image {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 800ms; }
+  .image-box-2__svg {
+    position: absolute;
+    top: 0;
+    left: 0; }
+    .image-box-2__svg .shape {
+      fill: transparent;
+      stroke-dasharray: 400%;
+      stroke-dashoffset: 400%;
+      stroke-width: 3px;
+      stroke: #19f6e8; }
+    .image-box-2__svg .animated {
+      animation: 800ms gallery-2-draw linear forwards; }
+  .image-box-2__loader {
+    width: 100%;
+    height: 100%;
+    transition: all 800ms; }
 
-.gallery-image2 {
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  transition: all 800ms; }
-
-.loader {
-  width: 100%;
-  height: 100%;
-  background-color: red;
-  transition: all 800ms; }
-
-svg {
-  position: absolute;
-  top: 0;
-  left: 0; }
-  svg .shape {
-    fill: transparent;
-    stroke-dasharray: 400%;
-    stroke-dashoffset: 400%;
-    stroke-width: 4px;
-    stroke: #19f6e8; }
-  svg .animated {
-    animation: 1s draw linear forwards; }
-
-@keyframes draw {
+@keyframes gallery-2-draw {
   0% {
     stroke-dasharray: 400%;
-    stroke-dashoffset: 400%;
-    stroke-width: 4px; }
+    stroke-dashoffset: 400%; }
   80% {
     stroke-dasharray: 400%;
     stroke-dashoffset: 0;
-    stroke-width: 4px;
     stroke: #19f6e8; }
   100% {
     stroke-dasharray: 400%;
     stroke-dashoffset: 0;
-    stroke-width: 4px;
     stroke: transparent; } }
 
 /*# sourceMappingURL=styles.css.map */

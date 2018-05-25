@@ -14,16 +14,7 @@ class Gallery2 extends Component {
 
         this.state = {
             allImages: gallery1Images,
-            style: {opacity:'0', transition: 'all 2000ms'}
         };
-    }
-
-    componentWillUnmount() {
-        this.setState({style : {opacity : '0', transition: 'all 2000ms'}});
-    }
-
-    componentDidMount() {
-        this.setState({style : {opacity : '0.8', transition: 'all 2000ms'}});
     }
 
     render() {
