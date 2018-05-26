@@ -1,66 +1,36 @@
 import React, {Component} from 'react';
 import {Grid, Row} from 'react-bootstrap';
+import Imagebox2 from './image-box2';
 import IMAGES from './all-images'
-
-function imagesLoaded(parentNode) {
-    const imgElements = [...parentNode.querySelectorAll("img")];
-    for (const img of imgElements) {
-        if (!img.complete) {
-            return false;
-        }
-    }
-    return true;
-}
 
 class Gallery3 extends Component {
 
     constructor(props) {
         super(props);
+
+        const gallery1Images = IMAGES.filter(function (item) {
+            return item.cat === "arch";
+        });
+
         this.state = {
-            loading: true,
+            allImages: gallery1Images,
         };
     }
-
-    renderSpinner() {
-        if (!this.state.loading) {
-            // Render nothing if not loading
-            return null;
-        }
-        return (
-            <div>SPINNER</div>
-        );
-    }
-
-    handleStateChange = () => {
-        this.setState({
-            loading: !imagesLoaded(this.galleryElement),
-        });
-    }
-
-
 
     render() {
         return (
             <Grid>
-                <Row ref={element => { this.galleryElement = element; }}>
-                    {this.renderSpinner()}
-
-                    {IMAGES.map((item, index) => {
+                <Row style={this.state.style}>
+                    {this.state.allImages.map((item, index) => {
                         return (
-                            <div className="image-box" >
-                                <img src={item.src}
-                                     key={index}
-                                     onLoad={this.handleStateChange}
-                                     onError={this.handleStateChange}
-                                     className="gallery-image"/>
-                            </div>
+                            <Imagebox2 source={item.src} key={index} caption={item.caption}>
+                            </Imagebox2>
                         )
                     })}
                 </Row>
             </Grid>
         )
     }
-
 }
 
 export default Gallery3
