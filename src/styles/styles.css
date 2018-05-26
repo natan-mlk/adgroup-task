@@ -95,7 +95,15 @@ body {
     background-color: #222;
     display: flex;
     align-items: center;
-    justify-content: center; }
+    justify-content: center;
+    cursor: pointer;
+    overflow: hidden; }
+    .image-box-2__wrapper:hover .image-box-2__overlay__color-box {
+      opacity: 0.7; }
+    .image-box-2__wrapper:hover .image-box-2__overlay p {
+      opacity: 1; }
+    .image-box-2__wrapper:hover .image-box-2__overlay svg {
+      left: 0; }
   .image-box-2__image {
     width: 100%;
     position: absolute;
@@ -121,6 +129,35 @@ body {
       stroke: #19f6e8;
       stroke-width: 3px;
       animation: 1000ms gallery-2-loader linear infinite; }
+  .image-box-2__overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute; }
+    .image-box-2__overlay__color-box {
+      width: 100%;
+      height: 100%;
+      transition: 500ms;
+      background: linear-gradient(to top, #04726b 0%, transparent 100%);
+      opacity: 0; }
+    .image-box-2__overlay p {
+      display: block;
+      position: absolute;
+      z-index: 5;
+      bottom: 7%;
+      left: 5%;
+      font-size: 17px;
+      text-align: left;
+      opacity: 0;
+      transition: all 300ms;
+      transition-delay: 200ms; }
+    .image-box-2__overlay svg {
+      position: absolute;
+      bottom: 10%;
+      left: -200px;
+      transition: 500ms; }
+      .image-box-2__overlay svg line {
+        stroke: #19f6e8;
+        stroke-width: 3px; }
 
 @keyframes gallery-2-draw {
   0% {

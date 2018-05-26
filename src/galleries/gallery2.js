@@ -23,7 +23,7 @@ class Gallery2 extends Component {
                 <Row style={this.state.style}>
                     {this.state.allImages.map((item, index) => {
                         return (
-                            <Imagebox2 source={item.src} key={index}>
+                            <Imagebox2 source={item.src} key={index} caption={item.caption}>
                             </Imagebox2>
                         )
                     })}

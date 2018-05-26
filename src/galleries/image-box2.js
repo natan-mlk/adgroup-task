@@ -7,21 +7,21 @@ class Imagebox extends Component {
         super(props);
 
         this.state = {
-            imgStyle: {opacity : '0'},
+            imgStyle: {opacity: '0'},
             svgClassName: '',
-            loaderStyle : {opacity : '1'}
+            loaderStyle: {opacity: '1'}
         };
     }
 
     handleImageLoaded() {
-        setTimeout(() => this.setState({imgStyle: {opacity : '1'}}), 500);
+        setTimeout(() => this.setState({imgStyle: {opacity: '1'}}), 500);
         this.setState({svgClassName: 'animated'});
-        this.setState({loaderStyle : {opacity : '0'}});
+        this.setState({loaderStyle: {opacity: '0'}});
     }
 
     render() {
         return (
-            <Col xs={6} md={4} className="image-box-2">
+            <Col xs={12} sm={6} md={4} className="image-box-2">
                 <div className="image-box-2__wrapper">
 
                     <img onLoad={() => this.handleImageLoaded()}
@@ -39,8 +39,19 @@ class Imagebox extends Component {
                     <div className="image-box-2__loader" style={this.state.loaderStyle}>
                         <svg height="3px" width="80px"
                              xmlns="http://www.w3.org/2000/svg">
-                            <line x1="0" y1="0" x2="80" y2="0" />
-                            {/*<rect height="100%" width="100%"/>*/}
+                            <line x1="0" y1="0" x2="80" y2="0"/>
+                        </svg>
+                    </div>
+
+                    <div className="image-box-2__overlay">
+                        <div className="image-box-2__overlay__color-box">
+                        </div>
+
+                        <p>{this.props.caption}</p>
+
+                        <svg height="3px" width="200px"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <line x1="0" y1="0" x2="200" y2="0"/>
                         </svg>
                     </div>
                 </div>
