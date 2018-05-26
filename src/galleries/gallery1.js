@@ -9,7 +9,7 @@ class Gallery1 extends Component {
         super(props);
 
         const gallery1Images = IMAGES.filter(function (item) {
-            return item.cat === "nature";
+            return item.cat === "people";
         });
 
         this.state = {

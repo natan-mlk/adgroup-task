@@ -11,9 +11,9 @@ class Imagebox extends Component {
                          className="gallery-image"/>
                 {/*</div>*/}
 
-                <svg height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
-                    <rect className="shape" height="100%" width="100%"/>
-                </svg>
+                {/*<svg height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">*/}
+                    {/*<rect className="shape" height="100%" width="100%"/>*/}
+                {/*</svg>*/}
 
 
             </div>

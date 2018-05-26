@@ -8,7 +8,14 @@ const images = [
     {src: 'https://placeimg.com/500/300/nature?7', cat: 'nature', caption:'A very long caption this time to show how' +
     ' will it behave if the line is broken'},
     {src: 'https://placeimg.com/500/300/nature?8', cat: 'nature', caption:'Something here'},
-    {src: 'https://placeimg.com/500/300/nature?8', cat: 'nature', caption:'Nice one'}
+    {src: 'https://placeimg.com/500/300/nature?8', cat: 'nature', caption:'Nice one'},
+    {src: 'https://placeimg.com/640/480/people?1', cat: 'people', caption:'Nice one'},
+    {src: 'https://placeimg.com/640/480/people?2', cat: 'people', caption:'Nice one'},
+    {src: 'https://placeimg.com/640/640/people?3', cat: 'people', caption:'Nice one'},
+    {src: 'https://placeimg.com/640/480/people?4', cat: 'people', caption:'Nice one'},
+    {src: 'https://placeimg.com/640/480/people?5', cat: 'people', caption:'Nice one'},
+    {src: 'https://placeimg.com/640/600/people?6', cat: 'people', caption:'Nice one'},
+    {src: 'https://placeimg.com/640/480/people?7', cat: 'people', caption:'Nice one'},
 ];
 
 export default images
