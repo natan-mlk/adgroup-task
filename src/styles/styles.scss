@@ -1,19 +1,12 @@
-$bodyBgColor: #2c2d31;
-$wrapperBgColor: #222;
-
-$mainAccentColor: #19f6e8;
-$mainAccentColorDarker: #14c9be;
-$fontFamily: 'Roboto Condensed', sans-serif;;
-$navListFontSize: 20px;
-
+@import '_partials/_vars.scss';
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
 
 body {
-    font-family: $fontFamily;
+  font-family: $fontFamily;
   margin: 0;
   padding: 0;
-    color: white;
-    background-color: $bodyBgColor;
+  color: white;
+  background-color: $bodyBgColor;
 }
 
 @import '_partials/_navigation.scss';
