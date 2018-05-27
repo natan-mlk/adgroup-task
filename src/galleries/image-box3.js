@@ -37,6 +37,8 @@ class Imagebox extends Component {
                     </div>
 
                     <div className="image-box-3__overlay" style={this.state.overlayStyle}>
+                        <div className="image-box-3__overlay__color-box"></div>
+
                         <p>{this.props.caption}</p>
                     </div>
                 </div>
