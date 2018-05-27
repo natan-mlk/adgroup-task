@@ -1,7 +1,7 @@
 .image-box-2 {
   overflow: hidden;
   position: relative;
-  padding-bottom: 17%;
+  padding-bottom: 50%;
   margin-bottom: 30px;
 
   &__wrapper {
@@ -14,25 +14,6 @@
     justify-content: center;
     cursor: pointer;
     overflow: hidden;
-
-    &:hover {
-
-      .image-box-2__overlay {
-
-        &__color-box {
-          opacity: 0.7;
-        }
-
-        p {
-          opacity: 1;
-        }
-
-        svg {
-          left: 0;
-        }
-      }
-    }
-
   }
 
   &__image {
@@ -110,9 +91,6 @@
       }
     }
   }
-
-  &__caption-box {
-  }
 }
 
 @keyframes gallery-2-draw {
@@ -147,16 +125,46 @@
   }
 }
 
-@media (min-width: 768px) {
+@media only screen and (min-width: 768px) {
 
   .image-box-2 {
     padding-bottom: 25%;
   }
-
 }
 
-@media (min-width: 1024px) {
+@media only screen and (min-width: 1024px) {
+
   .image-box-2 {
     padding-bottom: 17%;
+
+    &__wrapper {
+      height: 100%;
+      width: calc(100% - 30px);
+      position: absolute;
+      background-color: $wrapperBgColor;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      overflow: hidden;
+
+      &:hover {
+
+        .image-box-2__overlay {
+
+          &__color-box {
+            opacity: 0.7;
+          }
+
+          p {
+            opacity: 1;
+          }
+
+          svg {
+            left: 0;
+          }
+        }
+      }
+    }
   }
 }

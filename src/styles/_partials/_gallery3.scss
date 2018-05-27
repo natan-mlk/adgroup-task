@@ -1,7 +1,7 @@
 .image-box-3 {
   overflow: hidden;
   position: relative;
-  padding-bottom: 17%;
+  padding-bottom: 50%;
   margin-bottom: 30px;
 
   &__wrapper {
@@ -14,23 +14,6 @@
     cursor: pointer;
     overflow: hidden;
 
-    &:hover {
-
-      .image-box-3__image{
-        transform: scale(1.1);
-      }
-
-      .image-box-3__overlay {
-
-        &__color-box {
-          width: 100%;
-        }
-
-        p {
-          opacity: 1;
-        }
-      }
-    }
   }
 
   &__image {
@@ -104,16 +87,36 @@
   }
 }
 
-@media (min-width: 768px) {
+@media only screen and (min-width: 768px) {
 
   .image-box-3 {
     padding-bottom: 25%;
   }
-
 }
 
-@media (min-width: 1024px) {
+@media only screen and (min-width: 1024px) {
   .image-box-3 {
     padding-bottom: 17%;
+
+    &__wrapper {
+
+      &:hover {
+
+        .image-box-3__image {
+          transform: scale(1.1);
+        }
+
+        .image-box-3__overlay {
+
+          &__color-box {
+            width: 100%;
+          }
+
+          p {
+            opacity: 1;
+          }
+        }
+      }
+    }
   }
 }

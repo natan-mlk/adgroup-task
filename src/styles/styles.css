@@ -90,7 +90,7 @@ body {
 .image-box-2 {
   overflow: hidden;
   position: relative;
-  padding-bottom: 17%;
+  padding-bottom: 50%;
   margin-bottom: 30px; }
   .image-box-2__wrapper {
     height: 100%;
@@ -102,12 +102,6 @@ body {
     justify-content: center;
     cursor: pointer;
     overflow: hidden; }
-    .image-box-2__wrapper:hover .image-box-2__overlay__color-box {
-      opacity: 0.7; }
-    .image-box-2__wrapper:hover .image-box-2__overlay p {
-      opacity: 1; }
-    .image-box-2__wrapper:hover .image-box-2__overlay svg {
-      left: 0; }
   .image-box-2__image {
     width: 100%;
     position: absolute;
@@ -182,16 +176,32 @@ body {
     transform: translateX(100%); }
   100% {
     transform: translateX(-120%); } }
-@media (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .image-box-2 {
     padding-bottom: 25%; } }
-@media (min-width: 1024px) {
+@media only screen and (min-width: 1024px) {
   .image-box-2 {
-    padding-bottom: 17%; } }
+    padding-bottom: 17%; }
+    .image-box-2__wrapper {
+      height: 100%;
+      width: calc(100% - 30px);
+      position: absolute;
+      background-color: #222;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      overflow: hidden; }
+      .image-box-2__wrapper:hover .image-box-2__overlay__color-box {
+        opacity: 0.7; }
+      .image-box-2__wrapper:hover .image-box-2__overlay p {
+        opacity: 1; }
+      .image-box-2__wrapper:hover .image-box-2__overlay svg {
+        left: 0; } }
 .image-box-3 {
   overflow: hidden;
   position: relative;
-  padding-bottom: 17%;
+  padding-bottom: 50%;
   margin-bottom: 30px; }
   .image-box-3__wrapper {
     height: 100%;
@@ -202,12 +212,6 @@ body {
     justify-content: center;
     cursor: pointer;
     overflow: hidden; }
-    .image-box-3__wrapper:hover .image-box-3__image {
-      transform: scale(1.1); }
-    .image-box-3__wrapper:hover .image-box-3__overlay__color-box {
-      width: 100%; }
-    .image-box-3__wrapper:hover .image-box-3__overlay p {
-      opacity: 1; }
   .image-box-3__image {
     width: 100%;
     position: relative;
@@ -257,11 +261,17 @@ body {
   100% {
     transform: scale(2.5);
     opacity: 0; } }
-@media (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .image-box-3 {
     padding-bottom: 25%; } }
-@media (min-width: 1024px) {
+@media only screen and (min-width: 1024px) {
   .image-box-3 {
-    padding-bottom: 17%; } }
+    padding-bottom: 17%; }
+    .image-box-3__wrapper:hover .image-box-3__image {
+      transform: scale(1.1); }
+    .image-box-3__wrapper:hover .image-box-3__overlay__color-box {
+      width: 100%; }
+    .image-box-3__wrapper:hover .image-box-3__overlay p {
+      opacity: 1; } }
 
 /*# sourceMappingURL=styles.css.map */
