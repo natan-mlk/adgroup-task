@@ -11,11 +11,12 @@ const images = [
     {src: 'https://placeimg.com/500/300/nature?9', cat: 'nature', caption:'Nice one'},
 
     {src: 'https://placeimg.com/640/480/people?1', cat: 'people', caption:'Nice one'},
-    {src: 'https://placeimg.com/640/480/people?2', cat: 'people', caption:'Something here'},
-    {src: 'https://placeimg.com/640/640/people?3', cat: 'people', caption:'Beautiful'},
+    {src: 'https://placeimg.com/640/480/people?2', cat: 'people', caption:'A very long caption this time to show' +
+    ' something'},
+    {src: 'https://placeimg.com/640/840/people?3', cat: 'people', caption:'Beautiful'},
     {src: 'https://placeimg.com/640/480/people?4', cat: 'people', caption:'Batman'},
+    {src: 'https://placeimg.com/640/640/people?6', cat: 'people', caption:'Like anything'},
     {src: 'https://placeimg.com/640/480/people?5', cat: 'people', caption:'Another photo'},
-    {src: 'https://placeimg.com/640/600/people?6', cat: 'people', caption:'Like anything'},
     {src: 'https://placeimg.com/640/480/people?7', cat: 'people', caption:'People'},
     {src: 'https://placeimg.com/640/480/people?8', cat: 'people', caption:'More people'},
 

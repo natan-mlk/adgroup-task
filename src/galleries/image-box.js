@@ -1,21 +1,43 @@
 import React, {Component} from 'react';
 import {Col} from 'react-bootstrap';
 
+
+window.onresize = function(event) {
+
+};
+
 class Imagebox extends Component {
+
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            imageBoxStyle: {width: '0'},
+        };
+    }
+
+    handleImageLoaded(e) {
+        const imgWidth = e.target.offsetWidth;
+        this.setState({imageBoxStyle: {width: imgWidth + 'px'}});
+    }
 
     render() {
         return (
-            <div className="image-box">
-                {/*<div className="wrapper">*/}
-                    <img src={this.props.source}
-                         className="gallery-image"/>
-                {/*</div>*/}
+            <div className="image-box-1" style={this.state.imageBoxStyle}>
 
-                {/*<svg height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">*/}
-                    {/*<rect className="shape" height="100%" width="100%"/>*/}
-                {/*</svg>*/}
+                <img src={this.props.source}
+                     onLoad={(e) => this.handleImageLoaded(e)}
+                     className="image-box-1__image"/>
 
+                <div className="image-box-1__overlay-1">
+                </div>
 
+                <div className="image-box-1__overlay-2">
+                </div>
+
+                <div className="image-box-1__caption">
+                    <p>{this.props.caption}</p>
+                </div>
             </div>
         );
     }
