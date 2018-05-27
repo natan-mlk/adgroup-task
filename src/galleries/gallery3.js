@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Grid, Row} from 'react-bootstrap';
-import Imagebox2 from './image-box2';
+import Imagebox3 from './image-box3';
 import IMAGES from './all-images'
 
 class Gallery3 extends Component {
@@ -23,8 +23,8 @@ class Gallery3 extends Component {
                 <Row style={this.state.style}>
                     {this.state.allImages.map((item, index) => {
                         return (
-                            <Imagebox2 source={item.src} key={index} caption={item.caption}>
-                            </Imagebox2>
+                            <Imagebox3 source={item.src} key={index} caption={item.caption}>
+                            </Imagebox3>
                         )
                     })}
                 </Row>

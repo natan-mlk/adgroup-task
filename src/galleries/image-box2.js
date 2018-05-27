@@ -9,7 +9,8 @@ class Imagebox extends Component {
         this.state = {
             imgStyle: {opacity: '0'},
             svgClassName: '',
-            loaderStyle: {opacity: '1'}
+            loaderStyle: {opacity: '1'},
+            overlayStyle: {opacity: '0'}
         };
     }
 
@@ -17,6 +18,7 @@ class Imagebox extends Component {
         setTimeout(() => this.setState({imgStyle: {opacity: '1'}}), 500);
         this.setState({svgClassName: 'animated'});
         this.setState({loaderStyle: {opacity: '0'}});
+        this.setState({overlayStyle: {opacity: '1'}});
     }
 
     render() {
@@ -43,7 +45,7 @@ class Imagebox extends Component {
                         </svg>
                     </div>
 
-                    <div className="image-box-2__overlay">
+                    <div className="image-box-2__overlay" style={this.state.overlayStyle}>
                         <div className="image-box-2__overlay__color-box">
                         </div>
 
