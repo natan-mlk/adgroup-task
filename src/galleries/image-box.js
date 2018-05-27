@@ -1,10 +1,4 @@
 import React, {Component} from 'react';
-import {Col} from 'react-bootstrap';
-
-
-window.onresize = function (event) {
-
-};
 
 class Imagebox extends Component {
 
@@ -29,7 +23,8 @@ class Imagebox extends Component {
 
                 <img src={this.props.source}
                      onLoad={(e) => this.handleImageLoaded(e)}
-                     className="image-box-1__image"/>
+                     className="image-box-1__image"
+                     alt={this.props.caption}/>
 
                 <div className="image-box-1__overlay-1">
                 </div>

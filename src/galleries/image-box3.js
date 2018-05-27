@@ -27,7 +27,8 @@ class Imagebox extends Component {
 
                     <img onLoad={() => this.handleImageLoaded()}
                          src={this.props.source}
-                         className={this.state.imgLoadedStyle + " image-box-3__image"}/>
+                         className={this.state.imgLoadedStyle + " image-box-3__image"}
+                         alt={this.props.caption}/>
 
                     <div className="image-box-3__loader" style={this.state.loaderStyle}>
                         <svg height="100%" width="100%"
