@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {Col} from 'react-bootstrap';
 
 
-window.onresize = function(event) {
+window.onresize = function (event) {
 
 };
 
@@ -23,7 +23,9 @@ class Imagebox extends Component {
 
     render() {
         return (
-            <div className="image-box-1" style={this.state.imageBoxStyle}>
+            <div className="image-box-1"
+                 style={this.state.imageBoxStyle}
+                 onClick={() => this.props.handleClick()}>
 
                 <img src={this.props.source}
                      onLoad={(e) => this.handleImageLoaded(e)}

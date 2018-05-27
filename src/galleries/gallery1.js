@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Grid, Row} from 'react-bootstrap';
 import Imagebox from './image-box';
+import Lightbox from 'react-images';
 import IMAGES from './all-images'
 
 class Gallery1 extends Component {
@@ -13,22 +14,59 @@ class Gallery1 extends Component {
         });
 
         this.state = {
-            allImages: gallery1Images
+            allImages: gallery1Images,
+            currentImage: 0,
+            isOpen: false
         };
+    }
+
+    openLightbox(myIndex) {
+        this.setState({
+            isOpen: true,
+            currentImage: myIndex
+        });
+    }
+
+    onClose() {
+        this.setState({isOpen: false});
+    }
+
+    gotoNext() {
+        this.setState({currentImage: this.state.currentImage + 1});
+    }
+
+    gotoPrevious() {
+        this.setState({
+            currentImage: this.state.currentImage - 1,
+        });
     }
 
     render() {
         return (
-            <Grid>
-                <Row>
-                    {this.state.allImages.map((item, index) => {
-                        return (
-                            <Imagebox source={item.src} key={index} caption={item.caption}>
-                            </Imagebox>
-                        )
-                    })}
-                </Row>
-            </Grid>
+            <div>
+                <Grid>
+                    <Row>
+                        {this.state.allImages.map((item, index) => {
+                            return (
+                                <Imagebox source={item.src} key={index} caption={item.caption}
+                                          handleClick={() => this.openLightbox(index)}>
+                                </Imagebox>
+                            )
+                        })}
+                    </Row>
+                </Grid>
+
+                <Lightbox
+                    images={this.state.allImages}
+                    currentImage={this.state.currentImage}
+                    isOpen={this.state.isOpen}
+                    onClose={() => this.onClose()}
+                    onClickPrev={() => this.gotoPrevious()}
+                    onClickNext={() => this.gotoNext()}
+                    backdropClosesModal={true}
+                    width={1200}
+                />
+            </div>
         )
     }
 }
