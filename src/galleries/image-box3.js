@@ -22,7 +22,8 @@ class Imagebox extends Component {
     render() {
         return (
             <Col xs={12} sm={6} md={4} className="image-box-3">
-                <div className="image-box-3__wrapper">
+                <div className="image-box-3__wrapper"
+                     onClick={() => this.props.handleClick()}>
 
                     <img onLoad={() => this.handleImageLoaded()}
                          src={this.props.source}
