@@ -16,7 +16,8 @@ const images = [
     {src: 'https://placeimg.com/640/480/people?5', cat: 'people', caption:'Nice one'},
     {src: 'https://placeimg.com/640/600/people?6', cat: 'people', caption:'Nice one'},
     {src: 'https://placeimg.com/640/480/people?7', cat: 'people', caption:'Nice one'},
-    {src: 'https://placeimg.com/500/300/arch?1', cat: 'arch', caption:'Nice one'},
+    {src: 'https://placeimg.com/500/300/arch?1', cat: 'arch', caption:'A very long caption this time to show how' +
+    ' will it behave if line is broken'},
     {src: 'https://placeimg.com/500/300/arch?2', cat: 'arch', caption:'Nice one'},
     {src: 'https://placeimg.com/500/300/arch?3', cat: 'arch', caption:'Nice one'},
     {src: 'https://placeimg.com/500/300/arch?4', cat: 'arch', caption:'Nice one'},

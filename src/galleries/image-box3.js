@@ -9,7 +9,7 @@ class Imagebox extends Component {
         this.state = {
             imgLoadedStyle: '',
             loaderStyle: {display: 'block'},
-            overlayStyle: {opacity: '0'}
+            overlayStyle: {opacity: '0'},
         };
     }
 
@@ -28,8 +28,6 @@ class Imagebox extends Component {
                          src={this.props.source}
                          className={this.state.imgLoadedStyle + " image-box-3__image"}/>
 
-
-
                     <div className="image-box-3__loader" style={this.state.loaderStyle}>
                         <svg height="100%" width="100%"
                              xmlns="http://www.w3.org/2000/svg">
@@ -39,15 +37,7 @@ class Imagebox extends Component {
                     </div>
 
                     <div className="image-box-3__overlay" style={this.state.overlayStyle}>
-                        <div className="image-box-3__overlay__color-box">
-                        </div>
-
                         <p>{this.props.caption}</p>
-
-                        <svg height="3px" width="200px"
-                             xmlns="http://www.w3.org/2000/svg">
-                            <line x1="0" y1="0" x2="200" y2="0"/>
-                        </svg>
                     </div>
                 </div>
             </Col>
